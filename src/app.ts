@@ -18,7 +18,7 @@ let categories: string[] = [];
 let todos: Item[] = [];
 
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: '*'
 }))
 
 app.use(express.json());
@@ -92,6 +92,4 @@ app.delete('/todos/:id', (req: Request, res: Response) => {
     res.send("success");
 })
 
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
+export default app;
