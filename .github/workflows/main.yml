@@ -21,12 +21,6 @@ jobs:
       - name: 📦 Install dependencies
         run: npm ci
 
-      # - name: 🛠️ Build TypeScript
-      #   run: npm run build
-
-      # - name: ✅ Run tests
-      #   run: npm test
-
       - name: 📤 Deploy to Server via SSH
         uses: appleboy/ssh-action@v1.0.0
         with:
